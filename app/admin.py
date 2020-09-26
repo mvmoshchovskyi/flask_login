@@ -4,12 +4,14 @@ from flask_login import current_user, LoginManager
 from flask_admin.contrib.sqla import ModelView
 from flask_admin.menu import MenuLink
 
+
 from app import app, db
 from .models import UserModel, OwnerModel, PetModel
 
 
 class PetModelView(ModelView):
     form_excluded_columns = 'pets'
+
 
 
 class UserModelView(ModelView):
